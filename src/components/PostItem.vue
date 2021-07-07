@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card grey width="1000" height="200" class="ma-4 pa-2">
     <v-card-title class="headline">
       {{ Title }}
     </v-card-title>

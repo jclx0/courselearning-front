@@ -1,7 +1,10 @@
 <template>
-  <v-col>
-    <post-item title="this is a post" user-name="张三"> </post-item>
-  </v-col>
+  <div>
+    <v-col align="">
+      <post-item title="this is a post" user-name="张三"> </post-item>
+    </v-col>
+  </div>
+
 </template>
 
 <script>

@@ -97,7 +97,7 @@
           </v-dialog>
 
           <v-btn @click="goToDiscussionArea">
-            讨论区
+            {{ $route.params.courseId }}
           </v-btn>
 
         </v-row>
@@ -243,7 +243,7 @@ export default {
 
   methods: {
     goToDiscussionArea() {
-      this.$router.push(`/student/course/${this.courseId}/discussionArea`);
+      this.$router.push({ name: "DiscussionArea" });
     },
     refreshFile() {
       const { courseId } = this.$route.params;

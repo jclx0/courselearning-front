@@ -132,17 +132,17 @@ const routes = [
       {
         path: "course/:courseId",
         name: "CourseStudy",
-        component: CourseStudy,
-        children: {
-          path: "discussionArea",
-          name: "DiscussionArea",
-          component: DiscussionArea,
-          children: {
-            path: "post/:postId",
-            name: "details",
-            component: PostDetails
-          }
-        }
+        component: CourseStudy
+      },
+      {
+        path: "course/:courseId/discussionArea",
+        name: "DiscussionArea",
+        component: DiscussionArea
+      },
+      {
+        path: "post/:postId",
+        name: "details",
+        component: PostDetails
       },
       {
         path: "peek/:courseId",

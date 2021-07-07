@@ -97,7 +97,7 @@
           </v-dialog>
 
           <v-btn @click="goToDiscussionArea">
-            {{ $route.params.courseId }}
+            讨论区
           </v-btn>
 
         </v-row>

@@ -1,5 +1,5 @@
 <template>
-  <v-card grey width="1000" height="200" class="ma-4 pa-2">
+  <v-card grey width="2000" height="200" class="ma-4 pa-2">
     <v-card-title class="headline">
       {{ Title }}
     </v-card-title>
@@ -47,7 +47,7 @@ export default Vue.extend({
   methods: {
     goForDetails() {
       this.$router.push(
-        `/student/course/${this.courseId}/discussionArea/post/${this.postId}`
+        `/student/course/:courseId/${this.courseId}/discussionArea/post/${this.postId}`
       );
     }
   }

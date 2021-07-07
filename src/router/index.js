@@ -140,7 +140,7 @@ const routes = [
         component: DiscussionArea
       },
       {
-        path: "post/:postId",
+        path: "course/:courseId/:courseId/discussionArea/post/:postId",
         name: "details",
         component: PostDetails
       },

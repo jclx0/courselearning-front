@@ -5,7 +5,7 @@
     </v-card-title>
 
     <v-card-text>
-      {{ userName }}
+      {{ userId }}
     </v-card-text>
 
     <v-card-actions>

@@ -24,7 +24,7 @@ export const createPost = payload => {
  * @param {*} payload
  * @returns
  */
-export const getPostsByByPostTime = payload => {
+export const getPostsByPostTime = payload => {
   const { page, userId, courseId } = payload;
   return axios.get(`${POST_MODULE}/timePostList/${page}?userId=${userId}&courseId=${courseId}`).then(res => {
       return res.data;
@@ -36,7 +36,7 @@ export const getPostsByByPostTime = payload => {
  * @param {*} payload
  * @returns
  */
-export const getPostsByByReplyTime = payload => {
+export const getPostsByReplyTime = payload => {
   const { page, userId, courseId } = payload;
   return axios
     .get(

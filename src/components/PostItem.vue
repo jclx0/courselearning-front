@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import Vue from "vue";
-export default Vue.extend({
+
+export default {
   name: "PostItem",
   props: {
     Title: {
@@ -44,14 +44,24 @@ export default Vue.extend({
       default: ""
     }
   },
+  data() {
+    return {
+      postInfo: {}
+    };
+  },
   methods: {
     goForDetails() {
       this.$router.push(
         `/student/course/:courseId/${this.courseId}/discussionArea/post/${this.postId}`
       );
+    },
+    loadPost() {
     }
+  },
+  mounted() {
+    this.loadPost();
   }
-});
+}
 </script>
 
 <style scoped></style>

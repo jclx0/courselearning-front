@@ -1,6 +1,7 @@
 <template>
   <div>
-    <v-col align="">
+    <v-btn @click="createPost">发帖</v-btn>
+    <v-col>
       <post-item title="this is a post" user-name="张三"> </post-item>
     </v-col>
   </div>
@@ -11,7 +12,12 @@
 import PostItem from "@/components/PostItem";
 export default {
   name: "DiscussionArea",
-  components: { PostItem }
+  components: { PostItem },
+  methods: {
+    createPost() {
+      this.$router.push(`/student/course/${this.courseId}/discussionArea/createPost`);
+    }
+  }
 };
 </script>
 

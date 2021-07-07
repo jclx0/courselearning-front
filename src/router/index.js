@@ -18,6 +18,7 @@ import UserCenter from "@/views/student/UserCenter.vue";
 import HistoryOrder from "@/views/student/HistoryOrder.vue";
 import CourseStudy from "@/views/student/CourseStudy.vue";
 import CoursePeek from "@/views/student/CoursePeek.vue";
+import DiscussionArea from "@/views/student/DiscussionArea";
 // default
 import DefaultLayout from "@/layouts/defaultLayout.vue";
 import Login from "@/views/Login.vue";
@@ -129,7 +130,12 @@ const routes = [
       {
         path: "course/:courseId",
         name: "CourseStudy",
-        component: CourseStudy
+        component: CourseStudy,
+        children:{
+          path:"discussionArea",
+          name:"DiscussionArea",
+          component:DiscussionArea
+        }
       },
       {
         path: "peek/:courseId",

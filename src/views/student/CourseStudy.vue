@@ -95,7 +95,11 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
-          <v-btn @click="goToDisscussionArea">讨论区</v-btn>
+
+          <v-btn @click="goToDisscussionArea">
+            讨论区
+          </v-btn>
+
         </v-row>
       </template>
 
@@ -239,8 +243,8 @@ export default {
 
   methods: {
     goToDiscussionArea(){
-      this.$router.push(``)
-    }
+      this.$router.push(`/student/course/${this.courseId}/discussionArea`);
+    },
     refreshFile() {
       const { courseId } = this.$route.params;
       const uid = window.localStorage.getItem("userId");

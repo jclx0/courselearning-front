@@ -19,6 +19,7 @@ import HistoryOrder from "@/views/student/HistoryOrder.vue";
 import CourseStudy from "@/views/student/CourseStudy.vue";
 import CoursePeek from "@/views/student/CoursePeek.vue";
 import DiscussionArea from "@/views/student/DiscussionArea";
+import PostDetails from "@/views/student/PostDetails";
 // default
 import DefaultLayout from "@/layouts/defaultLayout.vue";
 import Login from "@/views/Login.vue";
@@ -26,6 +27,7 @@ import Register from "@/views/Register.vue";
 import Home from "@/views/Home.vue";
 // authentication
 import { judgeTeacher, judgeStudent } from "@/util/auth";
+
 
 Vue.use(VueRouter);
 
@@ -131,10 +133,15 @@ const routes = [
         path: "course/:courseId",
         name: "CourseStudy",
         component: CourseStudy,
-        children:{
-          path:"discussionArea",
-          name:"DiscussionArea",
-          component:DiscussionArea
+        children: {
+          path: "discussionArea",
+          name: "DiscussionArea",
+          component: DiscussionArea,
+          children: {
+            path: "post/:postId",
+            name: "details",
+            component: PostDetails
+          }
         }
       },
       {

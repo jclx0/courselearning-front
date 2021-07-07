@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-card-title class="headline">
-      {{postName}}
+      {{Title}}
     </v-card-title>
 
     <v-card-text>
@@ -15,24 +15,41 @@
 </template>
 
 <script>
-export default {
+import Vue from "vue";
+export default Vue.extend({
   name: "PostItem",
   props: {
-    postName:{
+    Title: {
       type: String,
       default: "无标题"
     },
     userName: {
       type: String,
       default: ""
+    },
+    userId: {
+      type: Number,
+      default: 0
+    },
+    postId: {
+      type: Number,
+      default: 0
+    },
+    courseId: {
+      type: Number,
+      default: 0
+    },
+    courseName: {
+      type: String,
+      default: ""
     }
   },
   methods: {
-    goForDetails(){
-      this.$router,push(`/student/course/${this.courseId}/discussionArea`)
+    goForDetails() {
+      this.$router.push(`/student/course/${this.courseId}/discussionArea/post/${this.postId}`)
     }
   }
-};
+});
 </script>
 
 <style scoped>

@@ -61,6 +61,7 @@ export default {
     }
   },
   mounted() {
+    this.courseId = this.$route.params.courseId;
     this.handleSearchByPostTime();
   }
 };

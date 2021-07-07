@@ -142,7 +142,7 @@ const routes = [
         component: DiscussionArea
       },
       {
-        path: "course/:courseId//discussionArea/createPost",
+        path: "course/:courseId/discussionArea/createPost",
         name: "creatPost",
         component: PostCreate
       },

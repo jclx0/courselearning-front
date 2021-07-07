@@ -1,18 +1,19 @@
 import axios from "axios";
 import { POST_MODULE } from "./_prefix";
 /**
- * 创建一个帖子 POST
+ * 创建一个帖子 POST post/create
  * @param {*} payload
  * @returns
  */
 export const createPost = payload => {
-  const { title, content, userId, courseId } = payload;
+  const { title, content, userId, courseId, userName } = payload;
   return axios
     .post(`${POST_MODULE}/create`, {
       title,
       content,
       userId,
-      courseId
+      courseId,
+      userName
     })
     .then(res => {
       return res.data;
@@ -26,7 +27,11 @@ export const createPost = payload => {
  */
 export const getPostsByPostTime = payload => {
   const { page, userId, courseId } = payload;
-  return axios.get(`${POST_MODULE}/timePostList/${page}?userId=${userId}&courseId=${courseId}`).then(res => {
+  return axios
+    .get(
+      `${POST_MODULE}/timePostList/${page}?userId=${userId}&courseId=${courseId}`
+    )
+    .then(res => {
       return res.data;
     });
 };

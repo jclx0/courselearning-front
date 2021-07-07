@@ -52,11 +52,13 @@ export default {
   methods: {
     submit() {
       const uid = window.localStorage.getItem("userId");
-      const cid = window.localStorage.getItem("courseId");
+      const uname = window.localStorage.getItem("username");
+      const cid = this.$route.params.courseId;
       const payload = {
         ...this.postInfo,
         userId: uid,
-        courseId: cid
+        courseId: cid,
+        userName: uname
       };
       console.log(payload);
       createPost(payload).then(res => {

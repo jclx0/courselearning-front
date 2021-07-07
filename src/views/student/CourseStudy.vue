@@ -95,6 +95,7 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
+          <v-btn >讨论区</v-btn>
         </v-row>
       </template>
 

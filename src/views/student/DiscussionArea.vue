@@ -1,10 +1,6 @@
 <template>
   <v-col>
-    <post-item
-      title="this is a post"
-      user-name="张三"
-    >
-    </post-item>
+    <post-item title="this is a post" user-name="张三"> </post-item>
   </v-col>
 </template>
 
@@ -16,6 +12,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

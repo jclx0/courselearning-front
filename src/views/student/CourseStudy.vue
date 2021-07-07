@@ -96,7 +96,7 @@
             </v-card>
           </v-dialog>
 
-          <v-btn @click="goToDisscussionArea">
+          <v-btn @click="goToDiscussionArea">
             讨论区
           </v-btn>
 
@@ -242,7 +242,7 @@ export default {
   },
 
   methods: {
-    goToDiscussionArea(){
+    goToDiscussionArea() {
       this.$router.push(`/student/course/${this.courseId}/discussionArea`);
     },
     refreshFile() {

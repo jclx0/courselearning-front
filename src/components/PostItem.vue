@@ -1,11 +1,11 @@
 <template>
   <v-card>
     <v-card-title class="headline">
-      {{Title}}
+      {{ Title }}
     </v-card-title>
 
     <v-card-text>
-      {{userName}}
+      {{ userName }}
     </v-card-text>
 
     <v-card-actions>
@@ -46,12 +46,12 @@ export default Vue.extend({
   },
   methods: {
     goForDetails() {
-      this.$router.push(`/student/course/${this.courseId}/discussionArea/post/${this.postId}`)
+      this.$router.push(
+        `/student/course/${this.courseId}/discussionArea/post/${this.postId}`
+      );
     }
   }
 });
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

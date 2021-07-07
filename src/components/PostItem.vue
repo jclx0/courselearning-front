@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     goForDetails(){
-      this.$router,push(``)
+      this.$router,push(`/student/course/${this.courseId}/discussionArea`)
     }
   }
 };
